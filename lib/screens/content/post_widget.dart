@@ -1,3 +1,4 @@
+import "package:android_dev/screens/content/comment_widget.dart";
 import "package:android_dev/screens/home_screen/models/post_model.dart";
 import "package:flutter/material.dart";
 
@@ -10,18 +11,21 @@ class PostWidget extends StatefulWidget {
 }
 
 class _PostWidgetState extends State<PostWidget> {
-  final bool isLiked = false; 
- // This should ideally be managed by state management
+  bool isLiked = false;
 
- void openBottomSheet() {
+  void openBottomSheet() {
+    final comments = widget.post?.comments ?? [];
     showModalBottomSheet(
       context: context,
+      isScrollControlled: true,
       builder: (BuildContext context) {
-        return Container(
-          height: 200,
-          color: Colors.white,
-          child: Center(
-            child: Text('Bottom Sheet Content'),
+        return SizedBox(
+          height: MediaQuery.of(context).size.height * 0.8,
+          child: ListView.builder(
+            itemCount: comments.length,
+            itemBuilder: (context, index) {
+              return CommentWidget(comment: comments[index]);
+            },
           ),
         );
       },
@@ -60,20 +64,14 @@ class _PostWidgetState extends State<PostWidget> {
                 icon: Icon(isLiked ? Icons.favorite : Icons.favorite_border),
                 onPressed: () {
                   setState(() {
-                    // This should ideally update the like count in a state management solution
-                    if (isLiked) {
-                      widget.post?.addLike((widget.post?.likeCount ?? 1) - 1);
-                    } else {
-                      widget.post?.addLike((widget.post?.likeCount ?? 0) + 1);
-                    }
+                    isLiked = !isLiked;
+                    widget.post?.addLike((widget.post?.likeCount ?? 0) + (isLiked ? 1 : -1));
                   });
                 },
               ),
               IconButton(
                 icon: const Icon(Icons.comment),
-                onPressed: () {
-                  openBottomSheet();
-                },
+                onPressed: openBottomSheet,
               ),
               IconButton(
                 icon: const Icon(Icons.share),

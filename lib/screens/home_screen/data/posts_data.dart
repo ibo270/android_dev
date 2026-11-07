@@ -1,0 +1,253 @@
+import 'package:android_dev/screens/home_screen/models/comment_model.dart';
+import 'package:android_dev/screens/home_screen/models/post_model.dart';
+import 'package:android_dev/screens/home_screen/models/story_model.dart';
+
+final List<StoryModel> mockStories = [
+  StoryModel(userName: 'ibo', avatarUrl: 'https://i.pravatar.cc/150?img=1'),
+  StoryModel(userName: 'abdusamat', avatarUrl: 'https://i.pravatar.cc/150?img=2'),
+  StoryModel(userName: 'aisha', avatarUrl: 'https://i.pravatar.cc/150?img=3'),
+  StoryModel(userName: 'timur', avatarUrl: 'https://i.pravatar.cc/150?img=4'),
+  StoryModel(userName: 'malika', avatarUrl: 'https://i.pravatar.cc/150?img=5'),
+  StoryModel(userName: 'sardor', avatarUrl: 'https://i.pravatar.cc/150?img=6'),
+  StoryModel(userName: 'lola', avatarUrl: 'https://i.pravatar.cc/150?img=7'),
+  StoryModel(userName: 'jasur', avatarUrl: 'https://i.pravatar.cc/150?img=8'),
+  StoryModel(userName: 'nilufar', avatarUrl: 'https://i.pravatar.cc/150?img=9'),
+  StoryModel(userName: 'bekzod', avatarUrl: 'https://i.pravatar.cc/150?img=10'),
+];
+
+final List<PostModel> mockPosts = [
+  PostModel(
+    imageUrl: 'https://picsum.photos/id/10/600/400',
+    description: 'Morning walk in the forest 🌲',
+    likeCount: 12,
+    commentCount: 3,
+    comments: [
+      CommentModel(userName: 'aisha', commentText: 'So peaceful!'),
+      CommentModel(userName: 'timur', commentText: 'Where is this?'),
+      CommentModel(userName: 'ibo', commentText: 'Near Chimgan 😄'),
+    ],
+  ),
+  PostModel(
+    imageUrl: 'https://picsum.photos/id/11/600/400',
+    description: 'Lake view after the rain',
+    likeCount: 34,
+    commentCount: 2,
+    comments: [
+      CommentModel(userName: 'malika', commentText: 'Beautiful colors'),
+      CommentModel(userName: 'sardor', commentText: 'Wallpaper material'),
+    ],
+  ),
+  PostModel(
+    imageUrl: 'https://picsum.photos/id/12/600/400',
+    description: 'Sunset at the beach 🌅',
+    likeCount: 58,
+    commentCount: 5,
+    comments: [
+      CommentModel(userName: 'lola', commentText: 'Wow 😍'),
+      CommentModel(userName: 'jasur', commentText: 'Take me there'),
+      CommentModel(userName: 'nilufar', commentText: 'Perfect timing'),
+      CommentModel(userName: 'bekzod', commentText: 'Which camera?'),
+      CommentModel(userName: 'ibo', commentText: 'Just my phone!'),
+    ],
+  ),
+  PostModel(
+    imageUrl: 'https://picsum.photos/id/13/600/400',
+    description: 'Rocky coast trip with friends',
+    likeCount: 21,
+    commentCount: 2,
+    comments: [
+      CommentModel(userName: 'abdusamat', commentText: 'Great day!'),
+      CommentModel(userName: 'timur', commentText: 'Next time invite me'),
+    ],
+  ),
+  PostModel(
+    imageUrl: 'https://picsum.photos/id/14/600/400',
+    description: 'Calm sea, calm mind',
+    likeCount: 9,
+    commentCount: 4,
+    comments: [
+      CommentModel(userName: 'aisha', commentText: 'Needed this today'),
+      CommentModel(userName: 'malika', commentText: 'So blue'),
+      CommentModel(userName: 'lola', commentText: 'Vacation vibes'),
+      CommentModel(userName: 'sardor', commentText: '🔥🔥'),
+    ],
+  ),
+  PostModel(
+    imageUrl: 'https://picsum.photos/id/15/600/400',
+    description: 'Waterfall hike — 10 km done 💪',
+    likeCount: 77,
+    commentCount: 7,
+    comments: [
+      CommentModel(userName: 'jasur', commentText: 'Respect!'),
+      CommentModel(userName: 'nilufar', commentText: 'How long did it take?'),
+      CommentModel(userName: 'ibo', commentText: 'About 4 hours'),
+      CommentModel(userName: 'bekzod', commentText: 'Legs ok? 😂'),
+      CommentModel(userName: 'timur', commentText: 'Amazing view'),
+      CommentModel(userName: 'aisha', commentText: 'Adding to my list'),
+      CommentModel(userName: 'abdusamat', commentText: 'Good job'),
+    ],
+  ),
+  PostModel(
+    imageUrl: 'https://picsum.photos/id/16/600/400',
+    description: 'Road trip day 1',
+    likeCount: 15,
+    commentCount: 2,
+    comments: [
+      CommentModel(userName: 'malika', commentText: 'Safe travels!'),
+      CommentModel(userName: 'sardor', commentText: 'Where to next?'),
+    ],
+  ),
+  PostModel(
+    imageUrl: 'https://picsum.photos/id/17/600/400',
+    description: 'Golden fields of autumn 🍂',
+    likeCount: 40,
+    commentCount: 3,
+    comments: [
+      CommentModel(userName: 'lola', commentText: 'Autumn is the best'),
+      CommentModel(userName: 'jasur', commentText: 'Love the light'),
+      CommentModel(userName: 'nilufar', commentText: 'So cozy'),
+    ],
+  ),
+  PostModel(
+    imageUrl: 'https://picsum.photos/id/18/600/400',
+    description: 'Green everywhere',
+    likeCount: 6,
+    commentCount: 2,
+    comments: [
+      CommentModel(userName: 'bekzod', commentText: 'Fresh!'),
+      CommentModel(userName: 'aisha', commentText: 'Nature heals'),
+    ],
+  ),
+  PostModel(
+    imageUrl: 'https://picsum.photos/id/19/600/400',
+    description: 'Lost in the woods (on purpose)',
+    likeCount: 28,
+    commentCount: 4,
+    comments: [
+      CommentModel(userName: 'timur', commentText: 'Did you find the way back? 😅'),
+      CommentModel(userName: 'ibo', commentText: 'Barely'),
+      CommentModel(userName: 'malika', commentText: 'Haha'),
+      CommentModel(userName: 'abdusamat', commentText: 'Nice shot'),
+    ],
+  ),
+  PostModel(
+    imageUrl: 'https://picsum.photos/id/20/600/400',
+    description: 'My study desk setup 📚',
+    likeCount: 50,
+    commentCount: 6,
+    comments: [
+      CommentModel(userName: 'sardor', commentText: 'Clean setup'),
+      CommentModel(userName: 'lola', commentText: 'Which laptop?'),
+      CommentModel(userName: 'ibo', commentText: 'Old ThinkPad'),
+      CommentModel(userName: 'jasur', commentText: 'Need that lamp'),
+      CommentModel(userName: 'nilufar', commentText: 'Motivating!'),
+      CommentModel(userName: 'bekzod', commentText: 'Exam season?'),
+    ],
+  ),
+  PostModel(
+    imageUrl: 'https://picsum.photos/id/21/600/400',
+    description: 'New shoes 👟',
+    likeCount: 19,
+    commentCount: 2,
+    comments: [
+      CommentModel(userName: 'aisha', commentText: 'Stylish!'),
+      CommentModel(userName: 'timur', commentText: 'Price?'),
+    ],
+  ),
+  PostModel(
+    imageUrl: 'https://picsum.photos/id/22/600/400',
+    description: 'City walk at dusk',
+    likeCount: 33,
+    commentCount: 3,
+    comments: [
+      CommentModel(userName: 'malika', commentText: 'Moody vibe'),
+      CommentModel(userName: 'abdusamat', commentText: 'Great composition'),
+      CommentModel(userName: 'sardor', commentText: 'Which street?'),
+    ],
+  ),
+  PostModel(
+    imageUrl: 'https://picsum.photos/id/23/600/400',
+    description: 'Cutlery flat lay — trying food photography',
+    likeCount: 11,
+    commentCount: 2,
+    comments: [
+      CommentModel(userName: 'lola', commentText: 'Minimalist 👌'),
+      CommentModel(userName: 'jasur', commentText: 'Now show the food'),
+    ],
+  ),
+  PostModel(
+    imageUrl: 'https://picsum.photos/id/24/600/400',
+    description: 'Finished this book in one night',
+    likeCount: 25,
+    commentCount: 5,
+    comments: [
+      CommentModel(userName: 'nilufar', commentText: 'Title please!'),
+      CommentModel(userName: 'bekzod', commentText: 'Worth reading?'),
+      CommentModel(userName: 'ibo', commentText: 'Totally'),
+      CommentModel(userName: 'aisha', commentText: 'Lend it to me'),
+      CommentModel(userName: 'timur', commentText: 'Bookworm 🐛'),
+    ],
+  ),
+  PostModel(
+    imageUrl: 'https://picsum.photos/id/25/600/400',
+    description: 'Snowy mountains ❄️',
+    likeCount: 64,
+    commentCount: 3,
+    comments: [
+      CommentModel(userName: 'malika', commentText: 'Brrr cold'),
+      CommentModel(userName: 'sardor', commentText: 'Skiing soon?'),
+      CommentModel(userName: 'abdusamat', commentText: 'Majestic'),
+    ],
+  ),
+  PostModel(
+    imageUrl: 'https://picsum.photos/id/26/600/400',
+    description: 'Vintage camera collection',
+    likeCount: 37,
+    commentCount: 4,
+    comments: [
+      CommentModel(userName: 'lola', commentText: 'Do they still work?'),
+      CommentModel(userName: 'ibo', commentText: 'Two of them do'),
+      CommentModel(userName: 'jasur', commentText: 'Classic'),
+      CommentModel(userName: 'nilufar', commentText: 'Love retro stuff'),
+    ],
+  ),
+  PostModel(
+    imageUrl: 'https://picsum.photos/id/27/600/400',
+    description: 'Ocean waves at noon 🌊',
+    likeCount: 18,
+    commentCount: 2,
+    comments: [
+      CommentModel(userName: 'bekzod', commentText: 'Hear the sound already'),
+      CommentModel(userName: 'aisha', commentText: 'Summer please come back'),
+    ],
+  ),
+  PostModel(
+    imageUrl: 'https://picsum.photos/id/28/600/400',
+    description: 'Camping night under the stars',
+    likeCount: 45,
+    commentCount: 6,
+    comments: [
+      CommentModel(userName: 'timur', commentText: 'Best weekend'),
+      CommentModel(userName: 'malika', commentText: 'Wasn\'t it cold?'),
+      CommentModel(userName: 'ibo', commentText: 'Freezing 🥶'),
+      CommentModel(userName: 'sardor', commentText: 'Marshmallows?'),
+      CommentModel(userName: 'abdusamat', commentText: 'Of course'),
+      CommentModel(userName: 'lola', commentText: 'Next time I\'m in'),
+    ],
+  ),
+  PostModel(
+    imageUrl: 'https://picsum.photos/id/29/600/400',
+    description: 'Top of the mountain, finally! 🏔️',
+    likeCount: 90,
+    commentCount: 7,
+    comments: [
+      CommentModel(userName: 'jasur', commentText: 'Legend'),
+      CommentModel(userName: 'nilufar', commentText: 'Congrats!!'),
+      CommentModel(userName: 'bekzod', commentText: 'How high?'),
+      CommentModel(userName: 'ibo', commentText: '3,300 m'),
+      CommentModel(userName: 'aisha', commentText: 'Incredible'),
+      CommentModel(userName: 'timur', commentText: 'Proud of you'),
+      CommentModel(userName: 'malika', commentText: 'Goals 🙌'),
+    ],
+  ),
+];

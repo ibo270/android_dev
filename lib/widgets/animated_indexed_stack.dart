@@ -5,7 +5,7 @@ import "package:flutter/material.dart";
 ///
 /// Pages are built lazily: a page is only created the first time it is shown.
 class AnimatedIndexedStack extends StatefulWidget {
-  const new({
+  const AnimatedIndexedStack({
     super.key,
     required this.index,
     required this.children,

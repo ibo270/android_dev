@@ -5,7 +5,7 @@ import "package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.da
 import "package:flutter/material.dart";
 
 class MainScreen extends StatefulWidget {
-  const new({super.key});
+  const MainScreen({super.key});
 
   @override
   State<MainScreen> createState() => _MainScreenState();
